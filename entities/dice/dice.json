@@ -1,0 +1,38 @@
+[
+ {
+  "title": "fire",
+  "values": "2,2,6,6,7,7"
+ },
+ {
+  "title": "storm",
+  "values": "4,4,5,5,6,6"
+ },
+ {
+  "title": "ice",
+  "values": "3,3,4,4,8,8"
+ },
+ {
+  "title": "abyss",
+  "values": "2,5,5,5,5,8"
+ },
+ {
+  "title": "death",
+  "values": "3,5,5,5,5,7"
+ },
+ {
+  "title": "nature",
+  "values": "4,5,5,5,5,6"
+ },
+ {
+  "title": "light",
+  "values": "2,2,3,8,8,8"
+ },
+ {
+  "title": "chaos",
+  "values": "2,3,3,7,7,7"
+ },
+ {
+  "title": "dark",
+  "values": "2,2,2,7,8,8"
+ }
+]

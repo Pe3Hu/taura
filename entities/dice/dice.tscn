@@ -1,0 +1,145 @@
+[gd_scene load_steps=25 format=3 uid="uid://c1anowodo7b2l"]
+
+[ext_resource type="Script" path="res://entities/dice/dice.gd" id="1_1f3vj"]
+[ext_resource type="PackedScene" uid="uid://bbyh6kb6a1h1t" path="res://entities/dice face/dice face.tscn" id="2_gsyfy"]
+[ext_resource type="Texture2D" uid="uid://glgvjemdhpsd" path="res://entities/dice face/faces/6.png" id="3_ejets"]
+[ext_resource type="Texture2D" uid="uid://d1gnhcphgftv" path="res://entities/dice face/faces/1.png" id="4_mrj6q"]
+[ext_resource type="Texture2D" uid="uid://cernqgcal8oq8" path="res://entities/dice face/faces/2.png" id="5_8vb8u"]
+[ext_resource type="Texture2D" uid="uid://dx4imtunllewp" path="res://entities/dice face/faces/3.png" id="6_pcvik"]
+[ext_resource type="Texture2D" uid="uid://b2h6qev86oqea" path="res://entities/dice face/faces/4.png" id="7_78bae"]
+[ext_resource type="Texture2D" uid="uid://7dq5mfmwvc5c" path="res://entities/dice face/faces/5.png" id="8_n6d3b"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mcj2d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l43ur"]
+size = Vector3(1.98, 1.98, 1.98)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cm03g"]
+albedo_color = Color(0.09, 0.495, 0.9, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xge1c"]
+material = SubResource("StandardMaterial3D_cm03g")
+size = Vector3(1.98, 1.98, 1.98)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kbv67"]
+transparency = 1
+albedo_texture = ExtResource("4_mrj6q")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lhdi6"]
+material = SubResource("StandardMaterial3D_kbv67")
+center_offset = Vector3(1, 0, 0)
+orientation = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_esntp"]
+transparency = 1
+albedo_texture = ExtResource("5_8vb8u")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xmx7a"]
+material = SubResource("StandardMaterial3D_esntp")
+center_offset = Vector3(0, 1, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5rmj4"]
+transparency = 1
+albedo_texture = ExtResource("6_pcvik")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_h55uc"]
+material = SubResource("StandardMaterial3D_5rmj4")
+center_offset = Vector3(0, 0, 1)
+orientation = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fmprl"]
+transparency = 1
+albedo_texture = ExtResource("3_ejets")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vp3ck"]
+material = SubResource("StandardMaterial3D_fmprl")
+center_offset = Vector3(1, 0, 0)
+orientation = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ns5ov"]
+transparency = 1
+albedo_texture = ExtResource("8_n6d3b")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_c8x0s"]
+material = SubResource("StandardMaterial3D_ns5ov")
+center_offset = Vector3(0, 1, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rfblc"]
+transparency = 1
+albedo_texture = ExtResource("7_78bae")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jhrx8"]
+material = SubResource("StandardMaterial3D_rfblc")
+center_offset = Vector3(0, 0, 1)
+orientation = 2
+
+[node name="Dice" type="RigidBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_mcj2d")
+gravity_scale = 2.0
+freeze = true
+script = ExtResource("1_1f3vj")
+aspect = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+unique_name_in_owner = true
+shape = SubResource("BoxShape3D_l43ur")
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+unique_name_in_owner = true
+mesh = SubResource("BoxMesh_xge1c")
+
+[node name="Faces" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="DiceFace0" parent="Faces" node_paths=PackedStringArray("dice") instance=ExtResource("2_gsyfy")]
+unique_name_in_owner = true
+mesh = SubResource("PlaneMesh_lhdi6")
+dice = NodePath("../..")
+dimension = 2.0
+value = 1
+
+[node name="DiceFace1" parent="Faces" node_paths=PackedStringArray("dice") instance=ExtResource("2_gsyfy")]
+unique_name_in_owner = true
+mesh = SubResource("PlaneMesh_xmx7a")
+dice = NodePath("../..")
+dimension = 2.0
+value = 2
+orientation = 1
+
+[node name="DiceFace2" parent="Faces" node_paths=PackedStringArray("dice") instance=ExtResource("2_gsyfy")]
+unique_name_in_owner = true
+mesh = SubResource("PlaneMesh_h55uc")
+dice = NodePath("../..")
+dimension = 2.0
+value = 3
+orientation = 2
+
+[node name="DiceFace3" parent="Faces" node_paths=PackedStringArray("dice") instance=ExtResource("2_gsyfy")]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_vp3ck")
+dice = NodePath("../..")
+dimension = 2.0
+value = 6
+orientation = 3
+
+[node name="DiceFace4" parent="Faces" node_paths=PackedStringArray("dice") instance=ExtResource("2_gsyfy")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_c8x0s")
+dice = NodePath("../..")
+dimension = 2.0
+value = 5
+orientation = 4
+
+[node name="DiceFace5" parent="Faces" node_paths=PackedStringArray("dice") instance=ExtResource("2_gsyfy")]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0113118, -2.38419e-07, -0.00332785)
+mesh = SubResource("PlaneMesh_jhrx8")
+dice = NodePath("../..")
+dimension = 2.0
+value = 4
+orientation = 5
+
+[connection signal="roll_finished" from="." to="." method="_on_roll_finished"]
+[connection signal="sleeping_state_changed" from="." to="." method="_on_sleeping_state_changed"]

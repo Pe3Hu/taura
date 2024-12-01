@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://do4xhwky8pgte"]
+
+[ext_resource type="Script" path="res://entities/dice pool/dice pool.gd" id="1_1iqbo"]
+[ext_resource type="PackedScene" uid="uid://c7b2c3185ud7p" path="res://entities/pool plane/pool plane.tscn" id="2_qg8dg"]
+[ext_resource type="PackedScene" uid="uid://dxpjfvbvu66ds" path="res://entities/dice kit/dice kit.tscn" id="3_sx47x"]
+
+[node name="DicePool" type="Node3D"]
+process_mode = 3
+script = ExtResource("1_1iqbo")
+
+[node name="Planes" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00352335, 14, 0.00439286)
+
+[node name="PoolPlaneX0" parent="Planes" node_paths=PackedStringArray("dicepool") instance=ExtResource("2_qg8dg")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+dicepool = NodePath("../..")
+orientation = 0
+
+[node name="PoolPlaneY0" parent="Planes" node_paths=PackedStringArray("dicepool") instance=ExtResource("2_qg8dg")]
+unique_name_in_owner = true
+dicepool = NodePath("../..")
+
+[node name="PoolPlaneZ0" parent="Planes" node_paths=PackedStringArray("dicepool") instance=ExtResource("2_qg8dg")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
+dicepool = NodePath("../..")
+orientation = 2
+
+[node name="PoolPlaneX1" parent="Planes" node_paths=PackedStringArray("dicepool") instance=ExtResource("2_qg8dg")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0)
+dicepool = NodePath("../..")
+orientation = 3
+
+[node name="PoolPlaneY1" parent="Planes" node_paths=PackedStringArray("dicepool") instance=ExtResource("2_qg8dg")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14, 0)
+dicepool = NodePath("../..")
+orientation = 4
+
+[node name="PoolPlaneZ1" parent="Planes" node_paths=PackedStringArray("dicepool") instance=ExtResource("2_qg8dg")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
+dicepool = NodePath("../..")
+orientation = 5
+
+[node name="DiceKit" parent="." instance=ExtResource("3_sx47x")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00352335, 7, 0.00439286)

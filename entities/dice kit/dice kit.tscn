@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxpjfvbvu66ds"]
+
+[ext_resource type="Script" path="res://entities/dice kit/dice kit.gd" id="1_4ld34"]
+
+[node name="DiceKit" type="Node3D"]
+script = ExtResource("1_4ld34")
+aspects = Array[int]([2, 2, 2, 2, 2, 2, 2, 2, 2])
+
+[connection signal="dice_stoppage" from="." to="." method="_on_dice_stoppage"]

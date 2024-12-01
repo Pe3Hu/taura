@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpq0g6jrlkuea"]
+
+[ext_resource type="Script" path="res://entities/world/world.gd" id="1_sbgiu"]
+[ext_resource type="PackedScene" uid="uid://do4xhwky8pgte" path="res://entities/dice pool/dice pool.tscn" id="2_6jrsk"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_dtu4b"]
+size = Vector2(10, 10)
+
+[sub_resource type="Environment" id="Environment_08trg"]
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_sbgiu")
+
+[node name="FPS" type="Label" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00502586, 0.00399554, 0.00360811)
+visible = false
+mesh = SubResource("PlaneMesh_dtu4b")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 15, 0)
+light_color = Color(1, 1, 0.356863, 1)
+spot_range = 14.813
+spot_angle = 39.55
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 20, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_08trg")
+
+[node name="DicePool" parent="." instance=ExtResource("2_6jrsk")]
+dimensions = Vector3(20, 14, 20)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

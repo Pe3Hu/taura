@@ -1,0 +1,8 @@
+res://entities/world/world.tscn
+res://entities/dice pool/dice pool.tscn
+res://entities/dice kit/dice kit.tscn
+res://entities/dice/dice.tscn
+res://entities/dice kit/dice kit.gd
+res://script/Global.gd
+res://script/Constants.gd
+res://entities/dice/dice.gd

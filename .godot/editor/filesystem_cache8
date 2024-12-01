@@ -1,0 +1,50 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1733067619
+::res://assets/::1733067538
+default_env.tres::Environment::-1::1690116911::0::1::::<><>::
+icon.png::CompressedTexture2D::2432420761471245026::1690116911::1732093164::1::::<><>::
+icon.svg::CompressedTexture2D::9162371498834860976::1690116911::1732093164::1::::<><>::
+README.md::TextFile::-1::1690795285::0::1::::<><>::
+::res://assets/fonts/::1733067538
+::res://assets/fonts/digital/::1733067538
+Inter-Black.ttf::FontFile::2023361649885781834::1694723238::1732093164::1::::<><>::
+::res://assets/fonts/letter/::1733067538
+Roboto-Bold.ttf::FontFile::7183128479095054959::1663817230::1732093164::1::::<><>::
+Roboto-Light.ttf::FontFile::2934334192827154238::1663817230::1732093164::1::::<><>::
+Walter-Bold.ttf::FontFile::6104160909452173604::1570526552::1732093164::1::::<><>::
+::res://entities/::1733069164
+::res://entities/dice/::1733069587
+dice.gd::GDScript::-1::1733069508::0::1::::Dice<>RigidBody3D<>::
+dice.json::JSON::-1::1732183413::0::1::::<><>::
+dice.tscn::PackedScene::6598566801292916453::1733069587::0::1::::<><>::res://entities/dice/dice.gd<>uid://bbyh6kb6a1h1t::::res://entities/dice face/dice face.tscn<>uid://glgvjemdhpsd::::res://entities/dice face/faces/6.png<>uid://d1gnhcphgftv::::res://entities/dice face/faces/1.png<>uid://cernqgcal8oq8::::res://entities/dice face/faces/2.png<>uid://dx4imtunllewp::::res://entities/dice face/faces/3.png<>uid://b2h6qev86oqea::::res://entities/dice face/faces/4.png<>uid://7dq5mfmwvc5c::::res://entities/dice face/faces/5.png
+::res://entities/dice face/::1733067538
+dice face.gd::GDScript::-1::1732274279::0::1::::DiceFace<>MeshInstance3D<>::
+dice face.tscn::PackedScene::2506635500176819987::1732274204::0::1::::<><>::res://entities/dice face/dice face.gd<>uid://bhj45wx4r1301::::res://entities/dice face/faces/0.png
+::res://entities/dice face/faces/::1733069808
+0.png::CompressedTexture2D::2898137547938844956::1732084240::1732093164::1::::<><>::
+1.png::CompressedTexture2D::264628241241201583::1732084240::1732093164::1::::<><>::
+2.png::CompressedTexture2D::5089509375611513393::1732084240::1732093164::1::::<><>::
+3.png::CompressedTexture2D::8833980604536310963::1732084240::1732093164::1::::<><>::
+4.png::CompressedTexture2D::4297881149752290184::1732084240::1732093164::1::::<><>::
+5.png::CompressedTexture2D::2253261813960302926::1732084240::1732093164::1::::<><>::
+6.png::CompressedTexture2D::444243500190349579::1732084241::1732093164::1::::<><>::
+7.png::CompressedTexture2D::1889345868152914512::1732084241::1732093164::1::::<><>::
+8.png::CompressedTexture2D::6121621449081922812::1733069792::1733069811::1::::<><>::
+9.png::CompressedTexture2D::7768476001546164867::1733069797::1733069811::1::::<><>::
+::res://entities/dice kit/::1733069587
+dice kit.gd::GDScript::-1::1733069564::0::1::::DiceKit<>Node3D<>::
+dice kit.tscn::PackedScene::8805127608486649740::1733069587::0::1::::<><>::res://entities/dice kit/dice kit.gd
+prediction.gd::GDScript::-1::1732803242::0::1::::Prediction<>Resource<>::
+::res://entities/dice pool/::1733069587
+dice pool.gd::GDScript::-1::1732274790::0::1::::DicePool<>Node3D<>::
+dice pool.tscn::PackedScene::8203182980367346730::1733069587::0::1::::<><>::res://entities/dice pool/dice pool.gd<>uid://c7b2c3185ud7p::::res://entities/pool plane/pool plane.tscn<>uid://dxpjfvbvu66ds::::res://entities/dice kit/dice kit.tscn
+::res://entities/pool plane/::1733067538
+pool plane.gd::GDScript::-1::1732274752::0::1::::PoolPlane<>StaticBody3D<>::
+pool plane.tscn::PackedScene::7022593184308771067::1732275034::0::1::::<><>::res://entities/pool plane/pool plane.gd
+::res://entities/world/::1733069587
+world.gd::GDScript::-1::1732088921::0::1::::World<>Node<>::
+world.tscn::PackedScene::8246655032211948728::1733069587::0::1::::<><>::res://entities/world/world.gd<>uid://do4xhwky8pgte::::res://entities/dice pool/dice pool.tscn
+::res://script/::1733069268
+Constants.gd::GDScript::-1::1733069268::0::1::::Constants<>Node<>::
+Global.gd::GDScript::-1::1733069214::0::1::::<>Node<>::
+::res://shaders/::1728818099
